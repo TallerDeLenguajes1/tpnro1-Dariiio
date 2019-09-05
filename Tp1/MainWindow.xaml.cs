@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Entidades;
 
 namespace Tp1
 {
@@ -23,6 +24,8 @@ namespace Tp1
         public MainWindow()
         {
             InitializeComponent();
+            Alumno a = new Alumno();
+            
         }
     }
 }

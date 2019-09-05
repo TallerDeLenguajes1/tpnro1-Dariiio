@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="340" Width="480" MinWidth="480" MinHeight="340">
     <Grid>
-        
+        <StackPanel Margin="20,20,0,9" HorizontalAlignment="Left" Width="200">
+            <Label Content="Nombre"/>
+            <TextBox x:Name="TbxNombre" Height="22" TextWrapping="Wrap" Text=""/>
+            <Label Content="Apellido"/>
+            <TextBox x:Name="TbxApellido" Height="23" TextWrapping="Wrap" Text=""/>
+            <Label Content="Curso"/>
+            <ComboBox/>
+            <Button x:Name="BtnGuardar" Content="Guardar" VerticalAlignment="Bottom" Margin="153,100,0,0"/>
+        </StackPanel>
+        <StackPanel Margin="0,20,20,9" HorizontalAlignment="Right" Width="200">
+            <Label Content="Alumnos"/>
+            <ListView Height="100">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button x:Name="BtnExportar" Content="Exportar" VerticalAlignment="Top" Margin="125,120,0,0"/>
+        </StackPanel>
+
     </Grid>
 </Window>
