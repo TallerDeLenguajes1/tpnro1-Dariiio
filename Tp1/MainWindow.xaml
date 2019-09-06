@@ -13,19 +13,19 @@
             <Label Content="Apellido"/>
             <TextBox x:Name="TbxApellido" Height="23" TextWrapping="Wrap" Text=""/>
             <Label Content="Curso"/>
-            <ComboBox/>
-            <Button x:Name="BtnGuardar" Content="Guardar" VerticalAlignment="Bottom" Margin="153,100,0,0"/>
+            <ComboBox x:Name="CbxCurso"/>
+            <Button x:Name="BtnGuardar" Content="Guardar" VerticalAlignment="Bottom" Margin="153,100,0,0" HorizontalAlignment="Left" Width="47" Click="BtnGuardar_Click"/>
         </StackPanel>
         <StackPanel Margin="0,20,20,9" HorizontalAlignment="Right" Width="200">
             <Label Content="Alumnos"/>
-            <ListView Height="100">
+            <ListView x:Name="LvAlumnos" Height="200">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn/>
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Button x:Name="BtnExportar" Content="Exportar" VerticalAlignment="Top" Margin="125,120,0,0"/>
+            <Button x:Name="BtnExportar" Content="Exportar" VerticalAlignment="Top" Margin="125,20,0,0"/>
         </StackPanel>
 
     </Grid>

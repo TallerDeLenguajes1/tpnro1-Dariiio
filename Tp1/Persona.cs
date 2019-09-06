@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,28 +25,28 @@ namespace Entidades
             Id = id;
         }
 
-        private string nombre;
+        private string Nombre;
 
         public string GetNombre()
         {
-            return nombre;
+            return Nombre;
         }
 
         public void SetNombre(string value)
         {
-            nombre = value;
+            Nombre = value;
         }
 
-        private string apellido;
+        private string Apellido;
 
         public string GetApellido()
         {
-            return apellido;
+            return Apellido;
         }
 
         public void SetApellido(string value)
         {
-            apellido = value;
+            Apellido = value;
         }
 
         private Curso curso;
@@ -61,6 +62,14 @@ namespace Entidades
         }
 
         private int Id { get; set; }
+        public void InicializarId(int id)
+        {
+            Id = id;
+        }
+        public override string ToString()
+        {
+            return Nombre + " " + Apellido + " " + curso.ToString() + " " + Id;
+        }
     }
 
     class Alumno : Persona
@@ -70,4 +79,22 @@ namespace Entidades
         {
         }
     }
+
+    public class HelperArchivo
+    {
+        private const string PathVoley = @"C:\Users\Dario\Desktop\Voley.csv";
+        private const string PathFutbol = @"C:\Users\Dario\Desktop\Futbol.csv";
+        private const string PathAtletismo = @"C:\Users\Dario\Desktop\Atletismo.csv";
+
+        public static void GuardarArchivo()
+        {
+            using (StreamWriter sw = File.AppendText(PathVoley))
+            {
+                sw.WriteLine("as");
+                sw.Close();
+            }
+
+        }
+    }
+
 }
